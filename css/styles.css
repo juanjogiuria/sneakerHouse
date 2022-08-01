@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  height: 100vh; }
+  .container header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-top: 15px; }
+    .container header nav {
+      background-color: #eeeeee;
+      display: grid;
+      grid-template-columns: 7fr 0.5fr;
+      grid-template-areas: "logo carrito"; }
+      .container header nav div {
+        grid-area: logo; }
+        .container header nav div a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #27211D;
+          font-size: 30px;
+          font-weight: 100;
+          font-family: 'Lobster', cursive;
+          text-shadow: 1px 2px rgba(128, 128, 128, 0.567); }
+          .container header nav div a img {
+            height: 100px;
+            width: 100px; }
+          .container header nav div a h1 {
+            padding-bottom: 15px; }
+      .container header nav .carrito {
+        grid-area: carrito;
+        height: 80px;
+        width: 80px;
+        background-image: url("../img/carrito.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; }
+        .container header nav .carrito p {
+          font-family: 'Secular One', sans-serif;
+          padding-left: 8px;
+          font-size: 17px;
+          font-weight: 300;
+          text-shadow: 1px 1px rgba(160, 159, 159, 0.697); }
+  .container section {
+    background-color: black;
+    height: 5vh;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .container section p {
+      color: white;
+      text-align: center;
+      font-family: 'Didact Gothic', sans-serif; }
+  .container main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .container main .producto {
+      width: 300px;
+      margin: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.231); }
+      .container main .producto .foto-zapatilla {
+        height: 300px;
+        width: 300px; }
+        .container main .producto .foto-zapatilla img {
+          height: 100%;
+          width: 100%; }
+      .container main .producto .info-zapatilla {
+        height: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "nombre precio" "colores precio";
+        align-items: center; }
+        .container main .producto .info-zapatilla .nombre {
+          grid-area: nombre;
+          margin: 5px;
+          font-family: 'Secular One', sans-serif; }
+        .container main .producto .info-zapatilla .color {
+          grid-area: colores;
+          margin-left: 5px;
+          margin-bottom: 5px;
+          font-family: 'Didact Gothic', sans-serif; }
+        .container main .producto .info-zapatilla .precio {
+          grid-area: precio;
+          text-align: center;
+          font-family: 'Secular One', sans-serif; }
+      .container main .producto .boton-carrito {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 600;
+        cursor: pointer; }
+        .container main .producto .boton-carrito img {
+          height: 20px;
+          width: 20px;
+          margin-right: 5px; }
+        .container main .producto .boton-carrito:hover {
+          background-color: #fbed6c; }
+      .container main .producto:hover {
+        transform: scale(1.05);
+        transition: 0.3s; }
