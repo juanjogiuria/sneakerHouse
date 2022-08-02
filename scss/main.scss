@@ -13,15 +13,18 @@
         top: 0;
         z-index: 1;
         margin-top: 15px;
+        margin-bottom: 15px;
+
         nav {
             background-color: rgb(238, 238, 238);
             display: grid;
             grid-template-columns: 7fr 0.5fr;
             grid-template-areas: "logo carrito";
-            
+
 
             div {
                 grid-area: logo;
+
                 a {
                     text-decoration: none;
                     display: flex;
@@ -44,30 +47,32 @@
                     }
                 }
             }
+
             .carrito {
-                    grid-area: carrito;
-                    height: 80px;
-                    width: 80px;
-                    background-image: url("../img/carrito.png");
-                    background-size: cover;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                    p{
-                        //font-family: Arial, Helvetica, sans-serif;
-                        font-family: 'Secular One', sans-serif;
-                        padding-left: 8px;
-                        font-size: 17px;
-                        font-weight: 300;
-                        text-shadow: 1px 1px rgba(160, 159, 159, 0.697);
-                        
-                    }
+                grid-area: carrito;
+                height: 80px;
+                width: 80px;
+                background-image: url("../img/carrito.png");
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                p {
+                    //font-family: Arial, Helvetica, sans-serif;
+                    font-family: 'Secular One', sans-serif;
+                    padding-left: 8px;
+                    font-size: 17px;
+                    font-weight: 300;
+                    text-shadow: 1px 1px rgba(160, 159, 159, 0.697);
+
+                }
             }
         }
     }
 
-    section{
+    section {
         background-color: black;
         height: 5vh;
         margin-bottom: 15px;
@@ -75,56 +80,64 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        p{
+
+        p {
             color: white;
             text-align: center;
             font-family: 'Didact Gothic', sans-serif;
         }
     }
 
-    main{
+    main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        .producto{
+
+        .producto {
             width: 300px;
             margin: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.231);
-            .foto-zapatilla{
+
+            .foto-zapatilla {
                 height: 300px;
                 width: 300px;
-                img{
+
+                img {
                     height: 100%;
                     width: 100%;
                 }
             }
-            .info-zapatilla{
-                
+
+            .info-zapatilla {
+
                 height: auto;
                 display: grid;
                 grid-template-columns: 2fr 1fr;
                 grid-template-areas: "nombre precio"
-                                     "colores precio";
+                    "colores precio";
                 align-items: center;
-                .nombre{
+
+                .nombre {
                     grid-area: nombre;
                     margin: 5px;
                     font-family: 'Secular One', sans-serif;
                 }
-                .color{
+
+                .color {
                     grid-area: colores;
                     margin-left: 5px;
                     margin-bottom: 5px;
                     font-family: 'Didact Gothic', sans-serif;
                 }
-                .precio{
+
+                .precio {
                     grid-area: precio;
                     text-align: center;
                     font-family: 'Secular One', sans-serif;
                 }
             }
 
-            .boton-carrito{
+            .boton-carrito {
                 padding: 10px;
                 display: flex;
                 justify-content: center;
@@ -132,21 +145,88 @@
                 font-family: 'Didact Gothic', sans-serif;
                 font-weight: 600;
                 cursor: pointer;
-                img{
+
+                img {
                     height: 20px;
                     width: 20px;
                     margin-right: 5px;
                 }
 
-                &:hover{
+                &:hover {
                     //background-color: #EEEEEE;
                     background-color: #fbed6c;
                 }
             }
-            &:hover{
+
+            &:hover {
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.144) 31%);
+
                 transform: scale(1.05);
                 transition: 0.3s;
             }
+        }
+
+        .producto-en-carrito {
+            display: grid;
+            grid-template-areas: "imagen informacion boton";
+            align-items: center;
+            width: 60%;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.535);
+
+            .imagen {
+                grid-area: imagen;
+                height: 150px;
+                width: 150px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .informacion{
+                grid-area: informacion;
+                height: auto;
+                display: grid;
+                grid-template-columns: 11fr 1fr;
+                grid-template-areas: "nombre precio"
+                    "colores precio";
+                align-items: center;
+                
+
+                .nombre {
+                    grid-area: nombre;
+                    margin: 5px;
+                    font-family: 'Secular One', sans-serif;
+                }
+
+                .color {
+                    grid-area: colores;
+                    margin-left: 5px;
+                    margin-bottom: 5px;
+                    font-family: 'Didact Gothic', sans-serif;
+                }
+
+                .precio {
+                    grid-area: precio;
+                    text-align: center;
+                    font-family: 'Secular One', sans-serif;
+                }
+            }
+
+            .boton{
+                grid-area: boton;
+                justify-self: center;
+                height: 30px;
+                width: 30px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+
+
         }
     }
 }
