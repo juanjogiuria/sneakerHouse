@@ -45,10 +45,11 @@
         cursor: pointer; }
         .container header nav .carrito a {
           font-family: 'Secular One', sans-serif;
+          color: #ff3c3c;
           padding-left: 8px;
           font-size: 17px;
           font-weight: 300;
-          text-shadow: 1px 1px rgba(160, 159, 159, 0.697); }
+          text-shadow: 1.5px 1px rgba(0, 0, 0, 0.575); }
   .container section {
     background-color: black;
     height: 5vh;
@@ -61,22 +62,43 @@
       color: white;
       text-align: center;
       font-family: 'Didact Gothic', sans-serif; }
+  .container .section-total {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end; }
+    .container .section-total .total {
+      display: flex;
+      justify-self: flex-start; }
+      .container .section-total .total .p-total {
+        line-height: 50px;
+        color: black;
+        font-weight: 800;
+        font-size: 20px;
+        margin-right: 10px;
+        padding-top: 1px; }
+      .container .section-total .total .p-numero {
+        line-height: 50px;
+        color: black;
+        font-size: 25px;
+        margin-right: 5px; }
   .container main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
     .container main .producto {
-      width: 300px;
+      height: auto;
+      width: 250px;
       margin: 15px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.231); }
       .container main .producto .foto-zapatilla {
-        height: 300px;
-        width: 300px; }
+        height: 250px;
+        width: 250px; }
         .container main .producto .foto-zapatilla img {
           height: 100%;
           width: 100%; }
       .container main .producto .info-zapatilla {
-        height: auto;
+        height: 15vh;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas: "nombre precio" "colores precio";
@@ -154,3 +176,27 @@
         .container main .producto-en-carrito .boton img {
           height: 100%;
           width: 100%; }
+  .container footer {
+    height: 20vh;
+    background: white;
+    background: linear-gradient(180deg, white 0%, rgba(0, 0, 0, 0.144) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .container footer .nombre {
+      grid-area: nombre;
+      font-size: 25px;
+      font-family: 'Secular One', sans-serif;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.671); }
+      .container footer .nombre:hover {
+        color: #576dff;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.998);
+        transform: scale(1.03);
+        transition: 0.3s; }
+    .container footer .coder {
+      grid-area: colores;
+      font-size: 20px;
+      margin-left: 5px;
+      margin-bottom: 3px;
+      font-family: 'Didact Gothic', sans-serif;
+      border-bottom: 1px solid black; }

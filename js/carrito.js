@@ -6,7 +6,24 @@ productoEnCarrito = JSON.parse(productoEnCarrito);
 
 console.log(productoEnCarrito);
 
-function listarProductosDelCarrito(productoEnCarrito){
+function calcularTotal(productoEnCarrito) {
+    let resultado = 0;
+
+    productoEnCarrito.forEach(producto => {
+        resultado = resultado + producto.precio;
+    })
+
+    console.log("$" + resultado);
+    return resultado;
+}
+
+function mostrarTotal() {
+    const montoTotal = document.getElementById("monto-total");
+    montoTotal.innerHTML = "$" + (calcularTotal(productoEnCarrito));
+
+}
+
+function listarProductosDelCarrito(productoEnCarrito) {
 
     console.log('hiciste click');
 
@@ -22,13 +39,31 @@ function listarProductosDelCarrito(productoEnCarrito){
         <p class="nombre">${producto.nombre}</p>
         <p class="color">${producto.color}</p>
         <p class="precio">$${producto.precio}</p>
-    </div>
-    <div class="boton">
-        <img src="../img/borrar.png" alt="eliminar">
     </div>`;
-    
-    contenedorDelCarrito.appendChild(divProducto);
+
+        const botonBorrarDelCarrito = document.createElement("div");
+        botonBorrarDelCarrito.classList.add("boton");
+        botonBorrarDelCarrito.innerHTML = `<img src="../img/borrar.png" alt="eliminar">`;
+        botonBorrarDelCarrito.addEventListener("click", () => {
+
+
+            productoEnCarrito.splice(productoEnCarrito.indexOf(producto), 1);
+            contenedorDelCarrito.innerHTML = "";
+            listarProductosDelCarrito(productoEnCarrito);
+            mostrarTotal();
+
+            console.log("Eliminaste: " + producto.nombre);
+            console.log("indice: " + productoEnCarrito.indexOf(producto));
+            console.log(productoEnCarrito);
+
+        })
+
+
+        divProducto.appendChild(botonBorrarDelCarrito);
+        contenedorDelCarrito.appendChild(divProducto);
     });
 }
 
+
 listarProductosDelCarrito(productoEnCarrito);
+mostrarTotal();
