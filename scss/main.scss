@@ -53,10 +53,6 @@
                         width: 80px;
 
                     }
-
-                    h1 {
-                        
-                    }
                 }
             }
 
@@ -251,6 +247,7 @@
 
         .producto-en-carrito {
             display: grid;
+            height: auto;
             grid-template-areas: "imagen informacion boton";
             align-items: center;
             width: 60%;

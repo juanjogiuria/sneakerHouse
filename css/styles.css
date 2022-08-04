@@ -171,6 +171,7 @@
         transition: 0.3s; }
     .container main .producto-en-carrito {
       display: grid;
+      height: auto;
       grid-template-areas: "imagen informacion boton";
       align-items: center;
       width: 60%;
