@@ -13,26 +13,29 @@
     margin-bottom: 15px; }
     .container header nav {
       background-color: #eeeeee;
+      background-image: url("../img/fondo.jpg");
+      background-size: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
       display: grid;
       grid-template-columns: 7fr 0.5fr;
       grid-template-areas: "logo carrito"; }
       .container header nav div {
-        grid-area: logo; }
+        grid-area: logo;
+        padding-top: 5px; }
         .container header nav div a {
           text-decoration: none;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #27211D;
-          font-size: 30px;
+          font-size: 40px;
           font-weight: 100;
-          font-family: 'Lobster', cursive;
-          text-shadow: 1px 2px rgba(128, 128, 128, 0.567); }
+          font-family: 'Berkshire Swash', cursive;
+          text-shadow: 1.5px 2.5px white;
+          -webkit-text-stroke: 0.1px rgba(255, 255, 255, 0.043); }
           .container header nav div a img {
-            height: 100px;
-            width: 100px; }
-          .container header nav div a h1 {
-            padding-bottom: 15px; }
+            height: 80px;
+            width: 80px; }
       .container header nav .carrito {
         grid-area: carrito;
         height: 80px;
@@ -45,26 +48,36 @@
         cursor: pointer; }
         .container header nav .carrito a {
           font-family: 'Secular One', sans-serif;
-          color: #ff3c3c;
+          color: #e641f2ef;
           padding-left: 8px;
-          font-size: 17px;
+          padding-bottom: 10px;
+          font-size: 40px;
           font-weight: 300;
-          text-shadow: 1.5px 1px rgba(0, 0, 0, 0.575); }
-  .container section {
+          text-shadow: 1.5px 1.5px black;
+          -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.823); }
+        .container header nav .carrito:hover {
+          transform: scale(1.1); }
+      .container header nav:hover {
+        box-shadow: 0 0 15px rgba(253, 54, 183, 0.645);
+        border: 1px solid rgba(189, 35, 179, 0.285); }
+  .container .section-index {
     background-color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.645);
+    border: 1px solid rgba(255, 255, 255, 0.285);
     height: 5vh;
     margin-bottom: 15px;
     margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center; }
-    .container section p {
+    .container .section-index p {
       color: white;
       text-align: center;
       font-family: 'Didact Gothic', sans-serif; }
   .container .section-total {
     background-color: white;
     width: 80%;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-end; }
     .container .section-total .total {
@@ -73,30 +86,42 @@
       .container .section-total .total .p-total {
         line-height: 50px;
         color: black;
-        font-weight: 800;
+        font-weight: 1000;
         font-size: 20px;
         margin-right: 10px;
-        padding-top: 1px; }
+        padding-top: 1px;
+        font-family: 'Didact Gothic', sans-serif; }
       .container .section-total .total .p-numero {
         line-height: 50px;
         color: black;
-        font-size: 25px;
-        margin-right: 5px; }
+        font-size: 28px;
+        margin-right: 5px;
+        font-family: 'Didact Gothic', sans-serif; }
   .container main {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    background-image: url("../img/fondo.jpg");
+    background-size: 100%;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+    padding-top: 30px; }
     .container main .producto {
       height: auto;
       width: 250px;
-      margin: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.231); }
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
+      border: 1px solid rgba(0, 0, 0, 0.107);
+      filter: saturate(130%); }
       .container main .producto .foto-zapatilla {
         height: 250px;
         width: 250px; }
         .container main .producto .foto-zapatilla img {
           height: 100%;
-          width: 100%; }
+          width: 99%; }
+        .container main .producto .foto-zapatilla:hover {
+          filter: contrast(110%);
+          filter: saturate(170%); }
       .container main .producto .info-zapatilla {
         height: 15vh;
         display: grid;
@@ -105,15 +130,21 @@
         align-items: center; }
         .container main .producto .info-zapatilla .nombre {
           grid-area: nombre;
+          font-size: 18px;
+          text-shadow: 1px 1px white;
           margin: 5px;
           font-family: 'Secular One', sans-serif; }
         .container main .producto .info-zapatilla .color {
           grid-area: colores;
+          text-shadow: 1px 1px white;
+          color: #000000ae;
           margin-left: 5px;
           margin-bottom: 5px;
           font-family: 'Didact Gothic', sans-serif; }
         .container main .producto .info-zapatilla .precio {
           grid-area: precio;
+          text-shadow: 1px 1px white;
+          font-size: 20px;
           text-align: center;
           font-family: 'Secular One', sans-serif; }
       .container main .producto .boton-carrito {
@@ -123,6 +154,7 @@
         align-items: center;
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 600;
+        text-shadow: 1px 1px white;
         cursor: pointer; }
         .container main .producto .boton-carrito img {
           height: 20px;
@@ -132,7 +164,9 @@
           background-color: #fbed6c; }
       .container main .producto:hover {
         background: white;
-        background: linear-gradient(0deg, white 0%, rgba(0, 0, 0, 0.144) 31%);
+        background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
+        border: 1px solid rgba(189, 35, 179, 0.373);
+        box-shadow: 0 0 10px rgba(253, 54, 184, 0.577);
         transform: scale(1.05);
         transition: 0.3s; }
     .container main .producto-en-carrito {
@@ -140,19 +174,25 @@
       grid-template-areas: "imagen informacion boton";
       align-items: center;
       width: 60%;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.535); }
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.347);
+      border-radius: 3px; }
+      .container main .producto-en-carrito:hover {
+        filter: saturate(150%);
+        background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%); }
       .container main .producto-en-carrito .imagen {
         grid-area: imagen;
         height: 150px;
         width: 150px; }
         .container main .producto-en-carrito .imagen img {
-          width: 100%;
-          height: 100%; }
+          margin: 1px;
+          padding: 1px;
+          width: 99%;
+          height: 99%; }
       .container main .producto-en-carrito .informacion {
         grid-area: informacion;
         height: auto;
         display: grid;
-        grid-template-columns: 11fr 1fr;
+        grid-template-columns: 10fr 1.1fr;
         grid-template-areas: "nombre precio" "colores precio";
         align-items: center; }
         .container main .producto-en-carrito .informacion .nombre {
@@ -166,16 +206,23 @@
           font-family: 'Didact Gothic', sans-serif; }
         .container main .producto-en-carrito .informacion .precio {
           grid-area: precio;
+          font-size: 20px;
           text-align: center;
           font-family: 'Secular One', sans-serif; }
       .container main .producto-en-carrito .boton {
         grid-area: boton;
-        justify-self: center;
+        justify-self: end;
+        margin-right: 20px;
         height: 30px;
-        width: 30px; }
+        width: 30px;
+        cursor: pointer; }
         .container main .producto-en-carrito .boton img {
           height: 100%;
           width: 100%; }
+          .container main .producto-en-carrito .boton img:hover {
+            transform: scale(1.1); }
+      .container main .producto-en-carrito:hover {
+        box-shadow: 0 0 5px rgba(176, 71, 233, 0.622); }
   .container footer {
     height: 20vh;
     background: white;
@@ -189,10 +236,10 @@
       font-family: 'Secular One', sans-serif;
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.671); }
       .container footer .nombre:hover {
-        color: #576dff;
-        text-shadow: 0 0 2px rgba(0, 0, 0, 0.998);
+        color: #fff757;
+        text-shadow: 0 0 5px rgba(249, 94, 190, 0.998);
         transform: scale(1.03);
-        transition: 0.3s; }
+        transition: 0.1s; }
     .container footer .coder {
       grid-area: colores;
       font-size: 20px;

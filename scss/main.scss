@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
 .container {
     height: 100vh;
+    
 
     header {
         position: sticky;
@@ -17,6 +19,12 @@
 
         nav {
             background-color: rgb(238, 238, 238);
+            background-image: url("../img/fondo.jpg");
+            background-size: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
+            //border-top: 2px solid black;
+            //border-bottom: 2px solid black;
+
             display: grid;
             grid-template-columns: 7fr 0.5fr;
             grid-template-areas: "logo carrito";
@@ -24,26 +32,30 @@
 
             div {
                 grid-area: logo;
+                padding-top: 5px;
 
                 a {
                     text-decoration: none;
                     display: flex;
+                    //flex-direction: row-reverse;
                     align-items: center;
                     justify-content: center;
                     color: #27211D;
-                    font-size: 30px;
+                    //padding-top: 5px;
+                    font-size: 40px;
                     font-weight: 100;
-                    font-family: 'Lobster', cursive;
-                    text-shadow: 1px 2px rgba(128, 128, 128, 0.567);
+                    font-family: 'Berkshire Swash', cursive;
+                    text-shadow: 1.5px 2.5px rgb(255, 255, 255);
+                    -webkit-text-stroke: 0.1px rgba(255, 255, 255, 0.043);
 
                     img {
-                        height: 100px;
-                        width: 100px;
+                        height: 80px;
+                        width: 80px;
 
                     }
 
                     h1 {
-                        padding-bottom: 15px;
+                        
                     }
                 }
             }
@@ -62,19 +74,32 @@
                 a {
                     //font-family: Arial, Helvetica, sans-serif;
                     font-family: 'Secular One', sans-serif;
-                    color: #ff3c3c;
+                    color: #e641f2ef;
                     padding-left: 8px;
-                    font-size: 17px;
+                    padding-bottom: 10px;
+                    font-size: 40px;
                     font-weight: 300;
-                    text-shadow: 1.5px 1px rgba(0, 0, 0, 0.575);
+                    text-shadow: 1.5px 1.5px rgb(0, 0, 0);
+                    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.823);
 
                 }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 15px rgba(253, 54, 183, 0.645);
+                border: 1px solid rgba(189, 35, 179, 0.285);
             }
         }
     }
 
-    section {
+    .section-index{
         background-color: black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.645);
+        border: 1px solid rgba(255, 255, 255, 0.285);
         height: 5vh;
         margin-bottom: 15px;
         margin-top: 15px;
@@ -92,6 +117,7 @@
     .section-total {
         background-color: white;
         width: 80%;
+        margin-top: 5px;
         display: flex;
         justify-content: flex-end;
 
@@ -102,17 +128,19 @@
             .p-total {
                 line-height: 50px;
                 color: black;
-                font-weight: 800;
+                font-weight: 1000;
                 font-size: 20px;
                 margin-right: 10px;
                 padding-top: 1px;
+                font-family: 'Didact Gothic', sans-serif;
             }
 
             .p-numero {
                 line-height: 50px;
                 color: black;
-                font-size: 25px;
+                font-size: 28px;
                 margin-right: 5px;
+                font-family: 'Didact Gothic', sans-serif;
             }
         }
 
@@ -123,11 +151,20 @@
         justify-content: center;
         flex-wrap: wrap;
 
+        background-image: url("../img/fondo.jpg");
+        background-size: 100%;
+        background-color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+        padding-top: 30px;
+
+
         .producto {
             height: auto;
             width: 250px;
-            margin: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.231);
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
+            border: 1px solid rgba(0, 0, 0, 0.107);
+            filter: saturate(130%);
 
             .foto-zapatilla {
                 height: 250px;
@@ -135,7 +172,12 @@
 
                 img {
                     height: 100%;
-                    width: 100%;
+                    width: 99%;
+                }
+
+                &:hover {
+                    filter: contrast(110%);
+                    filter: saturate(170%);
                 }
             }
 
@@ -150,12 +192,16 @@
 
                 .nombre {
                     grid-area: nombre;
+                    font-size: 18px;
+                    text-shadow: 1px 1px rgb(255, 255, 255);
                     margin: 5px;
                     font-family: 'Secular One', sans-serif;
                 }
 
                 .color {
                     grid-area: colores;
+                    text-shadow: 1px 1px rgb(255, 255, 255);
+                    color: #000000ae;
                     margin-left: 5px;
                     margin-bottom: 5px;
                     font-family: 'Didact Gothic', sans-serif;
@@ -163,6 +209,8 @@
 
                 .precio {
                     grid-area: precio;
+                    text-shadow: 1px 1px rgb(255, 255, 255);
+                    font-size: 20px;
                     text-align: center;
                     font-family: 'Secular One', sans-serif;
                 }
@@ -175,6 +223,7 @@
                 align-items: center;
                 font-family: 'Didact Gothic', sans-serif;
                 font-weight: 600;
+                text-shadow: 1px 1px rgb(255, 255, 255);
                 cursor: pointer;
 
                 img {
@@ -186,13 +235,15 @@
                 &:hover {
                     //background-color: #EEEEEE;
                     background-color: #fbed6c;
+
                 }
             }
 
             &:hover {
                 background: rgb(255, 255, 255);
-                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.144) 31%);
-
+                background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
+                border: 1px solid rgba(189, 35, 179, 0.373);
+                box-shadow: 0 0 10px rgba(253, 54, 184, 0.577);
                 transform: scale(1.05);
                 transition: 0.3s;
             }
@@ -203,7 +254,15 @@
             grid-template-areas: "imagen informacion boton";
             align-items: center;
             width: 60%;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.535);
+            box-shadow: 0 0 1px rgba(255, 255, 255, 0.347);
+            border-radius: 3px;
+
+            &:hover{
+                filter: saturate(150%);
+                //background-color: rgba(0, 0, 0, 0.055);
+                background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
+                //border: 1px solid rgba(189, 35, 179, 0.196);
+            }
 
             .imagen {
                 grid-area: imagen;
@@ -211,16 +270,19 @@
                 width: 150px;
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    margin: 1px;
+                    padding: 1px;
+                    width: 99%;
+                    height: 99%;
                 }
+
             }
 
             .informacion {
                 grid-area: informacion;
                 height: auto;
                 display: grid;
-                grid-template-columns: 11fr 1fr;
+                grid-template-columns: 10fr 1.1fr;
                 grid-template-areas: "nombre precio"
                     "colores precio";
                 align-items: center;
@@ -241,6 +303,7 @@
 
                 .precio {
                     grid-area: precio;
+                    font-size: 20px;
                     text-align: center;
                     font-family: 'Secular One', sans-serif;
                 }
@@ -248,17 +311,25 @@
 
             .boton {
                 grid-area: boton;
-                justify-self: center;
+                justify-self: end;
+                margin-right: 20px;
                 height: 30px;
                 width: 30px;
+                cursor: pointer;
 
                 img {
                     height: 100%;
                     width: 100%;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
                 }
             }
 
-
+            &:hover {
+                box-shadow: 0 0 5px rgba(176, 71, 233, 0.622);
+            }
 
         }
     }
@@ -277,11 +348,11 @@
             font-family: 'Secular One', sans-serif;
             text-shadow: 0 0 3px rgba(0, 0, 0, 0.671);
 
-            &:hover{
-                color: #576dff;
-                text-shadow: 0 0 2px rgba(0, 0, 0, 0.998);
+            &:hover {
+                color: #fff757;
+                text-shadow: 0 0 5px rgba(249, 94, 190, 0.998);
                 transform: scale(1.03);
-                transition: 0.3s;
+                transition: 0.1s;
             }
         }
 
