@@ -9,33 +9,30 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    margin-top: 15px;
     margin-bottom: 15px; }
     .container header nav {
-      background-color: #eeeeee;
-      background-image: url("../img/fondo.jpg");
+      background-color: rgba(255, 255, 255, 0.966);
+      padding: 10px;
       background-size: 100%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
+      box-shadow: 0 9px 10px rgba(253, 54, 183, 0.427);
       display: grid;
-      grid-template-columns: 7fr 0.5fr;
-      grid-template-areas: "logo carrito"; }
-      .container header nav div {
+      grid-template-columns: 0.5fr 7fr 0.5fr;
+      grid-template-areas: "menu logo carrito"; }
+      .container header nav .boton-menu {
+        grid-area: menu;
+        display: flex;
+        align-items: center;
+        cursor: pointer; }
+      .container header nav .logo {
         grid-area: logo;
         padding-top: 5px; }
-        .container header nav div a {
+        .container header nav .logo a {
           text-decoration: none;
           display: flex;
           align-items: center;
-          justify-content: center;
-          color: #27211D;
-          font-size: 40px;
-          font-weight: 100;
-          font-family: 'Berkshire Swash', cursive;
-          text-shadow: 1.5px 2.5px white;
-          -webkit-text-stroke: 0.1px rgba(255, 255, 255, 0.043); }
-          .container header nav div a img {
-            height: 80px;
-            width: 80px; }
+          justify-content: center; }
+          .container header nav .logo a img {
+            width: 230px; }
       .container header nav .carrito {
         grid-area: carrito;
         height: 80px;
@@ -48,18 +45,15 @@
         cursor: pointer; }
         .container header nav .carrito a {
           font-family: 'Secular One', sans-serif;
-          color: #e641f2ef;
+          color: #ff5ac5;
           padding-left: 8px;
           padding-bottom: 10px;
           font-size: 40px;
           font-weight: 300;
           text-shadow: 1.5px 1.5px black;
-          -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.823); }
+          -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.823); }
         .container header nav .carrito:hover {
           transform: scale(1.1); }
-      .container header nav:hover {
-        box-shadow: 0 0 15px rgba(253, 54, 183, 0.645);
-        border: 1px solid rgba(189, 35, 179, 0.285); }
   .container .section-index {
     background-color: black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.645);
@@ -97,14 +91,23 @@
         font-size: 28px;
         margin-right: 5px;
         font-family: 'Didact Gothic', sans-serif; }
+  .container .section-img {
+    height: auto;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-top: 2px solid rgba(183, 183, 183, 0.228);
+    border-bottom: 2px solid rgba(183, 183, 183, 0.228); }
+    .container .section-img img {
+      width: 50%; }
   .container main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("../img/fondo.jpg");
+    box-shadow: 0 0 20px #f5f5f5;
     background-size: 100%;
-    background-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+    background-color: #F5F5F5;
     padding-top: 30px; }
     .container main .producto {
       height: auto;
@@ -176,7 +179,8 @@
       align-items: center;
       width: 60%;
       box-shadow: 0 0 1px rgba(255, 255, 255, 0.347);
-      border-radius: 3px; }
+      border: 1px solid rgba(255, 90, 197, 0.264);
+      border-radius: 8px; }
       .container main .producto-en-carrito:hover {
         filter: saturate(150%);
         background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%); }
@@ -192,10 +196,12 @@
       .container main .producto-en-carrito .informacion {
         grid-area: informacion;
         height: auto;
+        width: 95%;
         display: grid;
         grid-template-columns: 10fr 1.1fr;
         grid-template-areas: "nombre precio" "colores precio";
-        align-items: center; }
+        align-items: center;
+        justify-self: center; }
         .container main .producto-en-carrito .informacion .nombre {
           grid-area: nombre;
           margin: 5px;
