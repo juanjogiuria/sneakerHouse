@@ -56,7 +56,7 @@ body {
                         justify-content: center;
 
                         img {
-                            width: 230px;
+                            width: 180px;
 
                         }
                     }
@@ -100,7 +100,7 @@ body {
                 
                 .icono-menu img{
                     vertical-align: top;
-                    width: 40px;
+                    width: 30px;
                     cursor: pointer;
                 }
 
@@ -147,6 +147,7 @@ body {
 
         .section-index {
             background-color: black;
+            font-size: 13px;/////
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.645);
             border: 1px solid rgba(255, 255, 255, 0.285);
             height: 5vh;
@@ -202,7 +203,7 @@ body {
             background-color: #F5F5F5;
             
             img {
-                width: 70%;
+                width: 100%;////
             }
         }
 
@@ -218,15 +219,15 @@ body {
 
             .producto {
                 height: auto;
-                width: 250px;
-                margin: 10px;
+                width: 200px;
+                margin: 8px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
-                border: 1px solid rgba(0, 0, 0, 0.107);
+                border: 1px solid rgba(0, 0, 0, 0.233);
                 filter: saturate(130%);
 
                 .foto-zapatilla {
-                    height: 250px;
-                    width: 250px;
+                    height: 200px;
+                    width: 200px;
 
                     img {
                         height: 100%;
@@ -241,7 +242,7 @@ body {
 
                 .info-zapatilla {
 
-                    height: 15vh;
+                    height: 10vh;
                     display: grid;
                     grid-template-columns: 2fr 1fr;
                     grid-template-areas: "nombre precio"
@@ -250,32 +251,44 @@ body {
 
                     .nombre {
                         grid-area: nombre;
-                        font-size: 18px;
+                        font-size: 15px;////////
                         text-shadow: 1px 1px rgb(255, 255, 255);
-                        margin: 5px;
+                        margin-left: 5px;
                         font-family: 'Secular One', sans-serif;
                     }
 
                     .color {
                         grid-area: colores;
+                        align-self: flex-start;
                         text-shadow: 1px 1px rgb(255, 255, 255);
                         color: #000000ae;
                         margin-left: 5px;
-                        margin-bottom: 5px;
+                        font-size: 14px;//////////
                         font-family: 'Didact Gothic', sans-serif;
                     }
 
                     .precio {
                         grid-area: precio;
-                        text-shadow: 1px 1px rgb(255, 255, 255);
-                        font-size: 20px;
-                        text-align: center;
+                        color: white;
+                        background-color: #000000b5;
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.596);
+                        border-left: 2px solid rgba(0, 0, 0, 0.596);
+                        border-top: 2px solid rgba(0, 0, 0, 0.596);
+                        -webkit-text-stroke: 0.2px black;
+                        border-radius: 5px;
+                        text-shadow: 1px 1px rgb(0, 0, 0);
+                        font-size: 18px;////////////
+                        font-weight: 100;
+                        text-align: center;//////////
+                        align-self: flex-start;
                         font-family: 'Secular One', sans-serif;
+                        padding-top: 6px;
                     }
                 }
 
                 .boton-carrito {
-                    padding: 10px;
+                    padding: 5px;
+                    font-size: 14px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -285,8 +298,8 @@ body {
                     cursor: pointer;
 
                     img {
-                        height: 20px;
-                        width: 20px;
+                        height: 16px;
+                        width: 16px;
                         margin-right: 5px;
                     }
 
@@ -312,7 +325,7 @@ body {
                 height: auto;
                 grid-template-areas: "imagen informacion boton";
                 align-items: center;
-                width: 60%;
+                width: 90%;
                 box-shadow: 0 0 1px rgba(255, 255, 255, 0.347);
                 border: 1px solid rgba(255, 90, 197, 0.264);
                 border-radius: 8px;
@@ -432,3 +445,5 @@ body {
         }
     }
 }
+
+@import "partials/querie768px";

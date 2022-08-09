@@ -1,0 +1,24 @@
+@media screen and (min-width:768px){
+    body {
+    
+        .container {
+    
+            .section-index {
+                font-size: 20px;
+            }
+    
+            .section-img {
+                
+                img {
+                    width: 70%;
+                }
+            }
+    
+            main {
+                .producto-en-carrito {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
