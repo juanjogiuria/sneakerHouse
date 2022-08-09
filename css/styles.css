@@ -159,7 +159,8 @@ body .container {
       filter: saturate(130%); }
       body .container main .producto .foto-zapatilla {
         height: 200px;
-        width: 200px; }
+        width: 200px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.084); }
         body .container main .producto .foto-zapatilla img {
           height: 100%;
           width: 99%; }
@@ -211,6 +212,7 @@ body .container {
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 600;
         text-shadow: 1px 1px white;
+        border-top: 2px solid rgba(0, 0, 0, 0.076);
         cursor: pointer; }
         body .container main .producto .boton-carrito img {
           height: 16px;
@@ -313,5 +315,10 @@ body .container {
     font-size: 20px; }
   body .container .section-img img {
     width: 70%; }
-  body .container main .producto-en-carrito {
-    width: 60%; } }
+  body .container main {
+    padding-left: 10%;
+    padding-right: 10%; }
+    body .container main .producto {
+      margin: 14px; }
+    body .container main .producto-en-carrito {
+      width: 60%; } }
