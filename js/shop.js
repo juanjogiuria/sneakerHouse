@@ -27,6 +27,11 @@ const producto17 = new Producto("Air Jordan 1 Utility Q", "img/17-nike.webp", "A
 const producto18 = new Producto("Air Jordan 6 Retro", "img/18-nike.webp", "Azul y blanca", 53999);
 const producto19 = new Producto("Jordan Delta 3 SP", "img/19-nike.webp", "Lila y gris", 53999);
 const producto20 = new Producto("Jordan Air 200E", "img/20-nike.webp", "Azul y negra", 39999);
+const producto21 = new Producto("Nike Air Zoom Alphafly", "img/21-nike.webp", "Celeste y verde", 84999);
+const producto22 = new Producto("Zoom Fly 5", "img/22-nike.webp", "Celeste y verde", 54999);
+const producto23 = new Producto("ZoomX Invincible Run", "img/23-nike.webp", "Blanca", 58999);
+const producto24 = new Producto("ZoomX Vaporfly NEXT% 2", "img/24-nike.webp", "Roja y negra", 68999);
+const producto25 = new Producto("Pegasus 39", "img/25-nike.webp", "Verde y blanca", 36299);
 
 const productos = []
 
@@ -50,6 +55,11 @@ productos.push(producto17);
 productos.push(producto18);
 productos.push(producto19);
 productos.push(producto20);
+productos.push(producto21);
+productos.push(producto22);
+productos.push(producto23);
+productos.push(producto24);
+productos.push(producto25);
 
 console.log(productos);
 
@@ -126,6 +136,8 @@ function mostrarProducto(productos) {
 
             //almaceno en localStorage el array con los productos agregados al carrito
             localStorage.setItem('miArray', JSON.stringify(productoEnCarrito));
+            //almaceno en el localStorage el length del array para mostrar articulos en el carrito
+            localStorage.setItem('miArrayLength', productoEnCarrito.length);
             console.log('hiciste click');
             console.log(productoEnCarrito);
         })

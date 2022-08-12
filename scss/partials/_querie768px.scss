@@ -1,25 +1,88 @@
-@media screen and (min-width:768px){
+@media screen and (min-width:600px) {
     body {
-    
+
         .container {
-    
+
             .section-index {
                 font-size: 20px;
             }
-    
+
             .section-img {
-                
+
                 img {
                     width: 70%;
                 }
             }
-    
+
             main {
                 padding-left: 10%;
                 padding-right: 10%;
-                .producto{
+
+                .producto {
+                    width: 200px;
                     margin: 14px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
+                    border: 1px solid rgba(0, 0, 0, 0.233);
+                    
+
+                    .foto-zapatilla {
+                        height: 200px;
+                        width: 200px;
+
+
+                        img {
+                            height: 100%;
+                            width: 99%;
+                        }
+                    }
+
+                    .info-zapatilla {
+    
+                        .nombre {
+
+                            font-size: 15px; ////////
+                            text-shadow: 1px 1px rgb(255, 255, 255);
+                            margin-left: 5px;
+                        }
+    
+                        .color {
+                            
+                            text-shadow: 1px 1px rgb(255, 255, 255);
+                            color: #000000ae;
+                            margin-left: 5px;
+                            font-size: 14px; //////////
+                            font-family: 'Didact Gothic', sans-serif;
+                        }
+    
+                        .precio {
+                            -webkit-text-stroke: 0.2px black;
+                            font-size: 18px;
+                            font-weight: 100;
+                        }
+                    }
+
+
+                    .boton-carrito {
+                        padding: 5px;
+                        font-size: 14px;
+                        border-bottom: none;
+
+                        img {
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgb(255, 255, 255);
+                        background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
+                        border: 1px solid rgba(189, 35, 179, 0.373);
+                        box-shadow: 0 0 10px rgba(253, 54, 184, 0.577);
+                        transform: scale(1.05);
+                        transition: 0.3s;
+                    }
                 }
+
                 .producto-en-carrito {
                     width: 60%;
                 }

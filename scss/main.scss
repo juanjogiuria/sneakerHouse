@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
 
-    .opacity{
+    .opacity {
         background-color: rgba(0, 0, 0, 0.495);
         transition: all .5s ease;
         z-index: 100;
@@ -15,7 +15,7 @@ body {
 
     .container {
         height: 100vh;
-        
+
 
         header {
             position: sticky;
@@ -91,14 +91,14 @@ body {
                     }
                 }
 
-                .icono-menu{
+                .icono-menu {
                     justify-self: center;
                     align-self: center;
                     position: relative;
                     z-index: 10;
                 }
-                
-                .icono-menu img{
+
+                .icono-menu img {
                     vertical-align: top;
                     width: 30px;
                     cursor: pointer;
@@ -122,7 +122,7 @@ body {
                         padding: 100px 0px 20px 0px;
                         height: 100%;
                         list-style: none;
-                        
+
                         li {
                             color: white;
                             display: block;
@@ -147,7 +147,7 @@ body {
 
         .section-index {
             background-color: black;
-            font-size: 13px;/////
+            font-size: 13px; /////
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.645);
             border: 1px solid rgba(255, 255, 255, 0.285);
             height: 5vh;
@@ -201,9 +201,9 @@ body {
             display: flex;
             justify-content: center;
             background-color: #F5F5F5;
-            
+
             img {
-                width: 100%;////
+                width: 100%; ////
             }
         }
 
@@ -219,20 +219,21 @@ body {
 
             .producto {
                 height: auto;
-                width: 200px;
-                margin: 8px;
+                width: 100%;
+                margin: 10px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
-                border: 1px solid rgba(0, 0, 0, 0.233);
                 filter: saturate(130%);
 
                 .foto-zapatilla {
-                    height: 200px;
-                    width: 200px;
+
+                    width: 100%;
                     border-bottom: 2px solid rgba(0, 0, 0, 0.084);
+                    display: flex;
+                    justify-content: center;
 
                     img {
-                        height: 100%;
-                        width: 99%;
+                        height: 75%;
+                        width: 75%;
                     }
 
                     &:hover {
@@ -252,19 +253,18 @@ body {
 
                     .nombre {
                         grid-area: nombre;
-                        font-size: 15px;////////
-                        text-shadow: 1px 1px rgb(255, 255, 255);
-                        margin-left: 5px;
+                        font-size: 21px; ////////
+                        text-shadow: 2px 2px rgba(0, 0, 0, 0.068);
+                        margin-left: 30px;
                         font-family: 'Secular One', sans-serif;
                     }
 
                     .color {
                         grid-area: colores;
                         align-self: flex-start;
-                        text-shadow: 1px 1px rgb(255, 255, 255);
                         color: #000000ae;
-                        margin-left: 5px;
-                        font-size: 14px;//////////
+                        margin-left: 30px;
+                        font-size: 19px; //////////
                         font-family: 'Didact Gothic', sans-serif;
                     }
 
@@ -275,12 +275,12 @@ body {
                         border-bottom: 2px solid rgba(0, 0, 0, 0.596);
                         border-left: 2px solid rgba(0, 0, 0, 0.596);
                         border-top: 2px solid rgba(0, 0, 0, 0.596);
-                        -webkit-text-stroke: 0.2px black;
+                        -webkit-text-stroke: 0.5px black;
                         border-radius: 5px;
                         text-shadow: 1px 1px rgb(0, 0, 0);
-                        font-size: 18px;////////////
+                        font-size: 25px; ////////////
                         font-weight: 100;
-                        text-align: center;//////////
+                        text-align: center; //////////
                         align-self: flex-start;
                         font-family: 'Secular One', sans-serif;
                         padding-top: 6px;
@@ -288,8 +288,8 @@ body {
                 }
 
                 .boton-carrito {
-                    padding: 5px;
-                    font-size: 14px;
+                    padding: 10px;
+                    font-size: 20px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -297,11 +297,12 @@ body {
                     font-weight: 600;
                     text-shadow: 1px 1px rgb(255, 255, 255);
                     border-top: 2px solid rgba(0, 0, 0, 0.076);
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.076);
                     cursor: pointer;
 
                     img {
-                        height: 16px;
-                        width: 16px;
+                        height: 20px;
+                        width: 20px;
                         margin-right: 5px;
                     }
 
@@ -312,20 +313,13 @@ body {
                     }
                 }
 
-                &:hover {
-                    background: rgb(255, 255, 255);
-                    background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
-                    border: 1px solid rgba(189, 35, 179, 0.373);
-                    box-shadow: 0 0 10px rgba(253, 54, 184, 0.577);
-                    transform: scale(1.05);
-                    transition: 0.3s;
-                }
+
             }
 
             .producto-en-carrito {
                 display: grid;
                 height: auto;
-                grid-template-areas: "imagen informacion boton";
+                grid-template-areas: "imagen informacion cantidad boton";
                 align-items: center;
                 width: 90%;
                 box-shadow: 0 0 1px rgba(255, 255, 255, 0.347);
@@ -385,7 +379,11 @@ body {
                         text-align: center;
                         font-family: 'Secular One', sans-serif;
                     }
+
+
+
                 }
+
 
                 .boton {
                     grid-area: boton;
