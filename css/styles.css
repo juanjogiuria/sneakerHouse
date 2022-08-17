@@ -84,7 +84,7 @@ body {
             padding: 100px 0px 20px 0px;
             height: 100%;
             list-style: none; }
-            body .container header nav .cont-menu ul li {
+            body .container header nav .cont-menu ul a {
               color: white;
               display: block;
               font-family: 'Didact Gothic', sans-serif;
@@ -92,7 +92,7 @@ body {
               text-decoration: none;
               padding: 10px 50px;
               cursor: pointer; }
-              body .container header nav .cont-menu ul li:hover {
+              body .container header nav .cont-menu ul a:hover {
                 background-color: #ff4ce1;
                 color: #2a2a2a;
                 font-weight: 900;
@@ -141,15 +141,15 @@ body {
       display: flex;
       justify-content: center;
       background-color: #F5F5F5;
-      -webkit-animation: tiembla 6s infinite; }
+      -webkit-animation: tiembla .5s infinite; }
 
 @-webkit-keyframes tiembla {
-  0% {
-    -webkit-transform: rotateZ(0deg); }
+  40% {
+    -webkit-transform: rotateZ(1deg); }
   50% {
-    -webkit-transform: rotateZ(0deg) scale(1.1); }
-  100% {
-    -webkit-transform: rotateZ(0deg); } }
+    -webkit-transform: rotateZ(0deg); }
+  60% {
+    -webkit-transform: rotateZ(-1deg); } }
       body .container .section-img img {
         width: 100%; }
     body .container main {

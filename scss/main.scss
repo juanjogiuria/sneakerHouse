@@ -124,7 +124,7 @@ body {
                         height: 100%;
                         list-style: none;
 
-                        li {
+                        a {
                             color: white;
                             display: block;
                             font-family: 'Didact Gothic', sans-serif;
@@ -203,11 +203,11 @@ body {
             justify-content: center;
             background-color: #F5F5F5;
             @-webkit-keyframes tiembla{
-                0%  { -webkit-transform:rotateZ( 0deg); }
-                50% { -webkit-transform:rotateZ( 0deg) scale(1.1); }
-                100%{ -webkit-transform:rotateZ( 0deg); }
+                40%  { -webkit-transform:rotateZ( 1deg); }
+                50% { -webkit-transform:rotateZ( 0deg); }
+                60% { -webkit-transform:rotateZ( -1deg); }
             }
-            -webkit-animation: tiembla 6s infinite;
+            -webkit-animation: tiembla .5s infinite;
             
             
 
