@@ -7,7 +7,7 @@ productoEnCarrito = JSON.parse(productoEnCarrito);
 
 console.log(productoEnCarrito);
 
-function mostrarCarrito(i){
+function mostrarCarrito(i) {
     const carrito = document.getElementById('add-to-cart');
     carrito.innerHTML = i;
 }
@@ -38,7 +38,7 @@ function listarProductosDelCarrito(productoEnCarrito) {
 
     //Con el forEach recorres el array que recibis por parametro
     productoEnCarrito.forEach(producto => {
-        
+
         //Creo desde js un div y lo asigno a la variable divProducto
 
         //INFO DEL PRODUCTO
@@ -58,20 +58,47 @@ function listarProductosDelCarrito(productoEnCarrito) {
         botonBorrarDelCarrito.innerHTML = `<img src="../img/borrar.png" alt="eliminar">`;
         botonBorrarDelCarrito.addEventListener("click", () => {
 
-            productoEnCarrito.splice(productoEnCarrito.indexOf(producto), 1);
-            contenedorDelCarrito.innerHTML = "";
-            listarProductosDelCarrito(productoEnCarrito);
-            mostrarTotal();
+            Swal.fire({
+                title: 'Estas seguro?',
+                text: 'Confirma si quiere eliminar el producto.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, eliminar!',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                customClass: {
+                    popup: 'popup-alert',
+                    title: 'title-alert'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Eliminado!',
+                        'El producto fue eliminado del carrito.',
+                        'success'
+                    )
+                    productoEnCarrito.splice(productoEnCarrito.indexOf(producto), 1);
+                    contenedorDelCarrito.innerHTML = "";
+                    listarProductosDelCarrito(productoEnCarrito);
+                    mostrarTotal();
 
-            console.log("Eliminaste: " + producto.nombre);
-            console.log("indice: " + productoEnCarrito.indexOf(producto));
-            console.log(productoEnCarrito);
+                    console.log("Eliminaste: " + producto.nombre);
+                    console.log("indice: " + productoEnCarrito.indexOf(producto));
+                    console.log(productoEnCarrito);
+                }
+            })
 
         })
 
         //SUMAR, RESTAR Y MOSTRAR UNIDADES
         //CREO UN DIV CONTENEDOR DE LOS BOTONES DE UNIDADES
-        
+
 
 
 

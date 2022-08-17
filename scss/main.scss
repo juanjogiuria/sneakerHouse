@@ -219,9 +219,10 @@ body {
 
             .producto {
                 height: auto;
-                width: 100%;
+                width: 80%;
                 margin: 10px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
+                border-radius: 5px;
                 filter: saturate(130%);
 
                 .foto-zapatilla {
@@ -232,8 +233,8 @@ body {
                     justify-content: center;
 
                     img {
-                        height: 75%;
-                        width: 75%;
+                        height: 85%;
+                        width: 85%;
                     }
 
                     &:hover {
@@ -244,18 +245,19 @@ body {
 
                 .info-zapatilla {
 
-                    height: 10vh;
+                    height: 15vh;
                     display: grid;
                     grid-template-columns: 2fr 1fr;
                     grid-template-areas: "nombre precio"
                         "colores precio";
                     align-items: center;
+                    
 
                     .nombre {
                         grid-area: nombre;
                         font-size: 21px; ////////
                         text-shadow: 2px 2px rgba(0, 0, 0, 0.068);
-                        margin-left: 30px;
+                        margin-left: 10px;
                         font-family: 'Secular One', sans-serif;
                     }
 
@@ -263,13 +265,14 @@ body {
                         grid-area: colores;
                         align-self: flex-start;
                         color: #000000ae;
-                        margin-left: 30px;
+                        margin-left: 10px;
                         font-size: 19px; //////////
                         font-family: 'Didact Gothic', sans-serif;
                     }
 
                     .precio {
                         grid-area: precio;
+                        margin: 5px;
                         color: white;
                         background-color: #000000b5;
                         border-bottom: 2px solid rgba(0, 0, 0, 0.596);
@@ -289,6 +292,7 @@ body {
 
                 .boton-carrito {
                     padding: 10px;
+                    background-color: #fbed6cae ;
                     font-size: 20px;
                     display: flex;
                     justify-content: center;
@@ -296,8 +300,8 @@ body {
                     font-family: 'Didact Gothic', sans-serif;
                     font-weight: 600;
                     text-shadow: 1px 1px rgb(255, 255, 255);
-                    border-top: 2px solid rgba(0, 0, 0, 0.076);
-                    border-bottom: 2px solid rgba(0, 0, 0, 0.076);
+                    border-top: 2px solid rgba(0, 0, 0, 0.082);
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.076);
                     cursor: pointer;
 
                     img {
@@ -444,6 +448,10 @@ body {
 
         }
     }
+
+    //Estilos de las alertas
+    @import "partials/alerts";
 }
 
+//Estilos media querie 768px
 @import "partials/querie768px";
