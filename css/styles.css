@@ -10,7 +10,9 @@ body {
     transition: all .5s ease;
     z-index: 100; }
   body .container {
-    height: 100vh; }
+    height: 100vh;
+    display: flex;
+    flex-direction: column; }
     body .container header {
       position: sticky;
       top: 0;
@@ -114,9 +116,10 @@ body {
         text-align: center;
         font-family: 'Didact Gothic', sans-serif; }
     body .container .section-total {
-      background-color: white;
-      width: 80%;
+      background-color: transparent;
+      width: 50%;
       margin-top: 5px;
+      align-self: center;
       display: flex;
       justify-content: flex-end; }
       body .container .section-total .total {
@@ -140,16 +143,7 @@ body {
       height: auto;
       display: flex;
       justify-content: center;
-      background-color: #F5F5F5;
-      -webkit-animation: tiembla .5s infinite; }
-
-@-webkit-keyframes tiembla {
-  40% {
-    -webkit-transform: rotateZ(1deg); }
-  50% {
-    -webkit-transform: rotateZ(0deg); }
-  60% {
-    -webkit-transform: rotateZ(-1deg); } }
+      background-color: #F5F5F5; }
       body .container .section-img img {
         width: 100%; }
     body .container main {

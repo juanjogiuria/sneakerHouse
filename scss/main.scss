@@ -16,6 +16,8 @@ body {
 
     .container {
         height: 100vh;
+        display: flex;
+        flex-direction: column;
 
 
         header {
@@ -166,9 +168,10 @@ body {
         }
 
         .section-total {
-            background-color: white;
-            width: 80%;
+            background-color: transparent;
+            width: 50%;
             margin-top: 5px;
+            align-self: center;
             display: flex;
             justify-content: flex-end;
 
@@ -202,12 +205,12 @@ body {
             display: flex;
             justify-content: center;
             background-color: #F5F5F5;
-            @-webkit-keyframes tiembla{
-                40%  { -webkit-transform:rotateZ( 1deg); }
-                50% { -webkit-transform:rotateZ( 0deg); }
-                60% { -webkit-transform:rotateZ( -1deg); }
-            }
-            -webkit-animation: tiembla .5s infinite;
+            // @-webkit-keyframes tiembla{
+            //     40%  { -webkit-transform:rotateZ( 1deg); }
+            //     50% { -webkit-transform:rotateZ( 0deg, scale(.2)); }
+            //     60% { -webkit-transform:rotateZ( -1deg); }
+            // }
+            // -webkit-animation: tiembla .5s infinite;
             
             
 

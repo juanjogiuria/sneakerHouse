@@ -88,6 +88,9 @@ function listarProductosDelCarrito(productoEnCarrito) {
                     listarProductosDelCarrito(productoEnCarrito);
                     mostrarTotal();
 
+                    localStorage.setItem('miArray', JSON.stringify(productoEnCarrito));
+                    localStorage.setItem('miArrayLength', productoEnCarrito.length);
+
                     console.log("Eliminaste: " + producto.nombre);
                     console.log("indice: " + productoEnCarrito.indexOf(producto));
                     console.log(productoEnCarrito);

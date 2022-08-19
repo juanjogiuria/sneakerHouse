@@ -68,7 +68,17 @@ console.log(productos);
 //localStorage.clear();
 
 let contador_carrito = 0;
-const productoEnCarrito = [];
+let productoEnCarrito = [];
+
+if(localStorage.getItem('miArray')){
+    productoEnCarrito = localStorage.getItem('miArray');
+    productoEnCarrito = JSON.parse(productoEnCarrito);
+}
+
+if(localStorage.getItem('miArrayLength')){
+    contador_carrito = localStorage.getItem('miArrayLength');
+    document.getElementById("add-to-cart").innerHTML = contador_carrito;
+}
 //localStorage.removeItem('filtro');
 
 function actualizarContador(i) {
