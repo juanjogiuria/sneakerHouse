@@ -65,31 +65,44 @@ const productos = []
 
 // console.log(productos);
 
+let filtro = localStorage.getItem('filtro');
 
-fetch( '/data/products.json' )
-    .then( response => response.json() )
-    .then( data => {
-        for (let i = 0; i < data.length; i++ ){
-            productos.push(new Producto(data[i].nombre, data[i].imagen, data[i].tipo, data[i].color, data[i].precio));
+fetch('/data/products.json')
+    .then(response => response.json())
+    .then(data => {
+        for (let i = 0; i < data.length; i++) {
+            productos.push(
+                new Producto(
+                    data[i].nombre,
+                    data[i].imagen,
+                    data[i].tipo,
+                    data[i].color,
+                    data[i].precio
+                )
+            );
         }
-    })
 
-console.log(productos);
+        if (filtro) {
+            mostrarProductosFiltrados(productos, filtro);
+        } else {
+            mostrarProducto(productos);
+        }
+    });
+
 
 
 let contador_carrito = 0;
 let productoEnCarrito = [];
 
-if(localStorage.getItem('miArray')){
+if (localStorage.getItem('miArray')) {
     productoEnCarrito = localStorage.getItem('miArray');
     productoEnCarrito = JSON.parse(productoEnCarrito);
 }
 
-if(localStorage.getItem('miArrayLength')){
+if (localStorage.getItem('miArrayLength')) {
     contador_carrito = localStorage.getItem('miArrayLength');
     document.getElementById("add-to-cart").innerHTML = contador_carrito;
 }
-//localStorage.removeItem('filtro');
 
 function actualizarContador(i) {
     document.getElementById("add-to-cart").innerHTML = i;
@@ -181,12 +194,6 @@ function mostrarProductosFiltrados(productos, filtro) {
     });
 }
 
-let filtro = localStorage.getItem('filtro');
 
-if(filtro){
-    mostrarProductosFiltrados(productos, filtro);
-}else{
-    mostrarProducto(productos);
-}
 
 

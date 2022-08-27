@@ -99,22 +99,28 @@ function listarProductosDelCarrito(productoEnCarrito) {
 
         })
 
-        //SUMAR, RESTAR Y MOSTRAR UNIDADES
-        //CREO UN DIV CONTENEDOR DE LOS BOTONES DE UNIDADES
-
-
-
-
-
-
-
-
         document.getElementById("add-to-cart").innerHTML = productoEnCarrito.length;
         divProducto.appendChild(botonBorrarDelCarrito);
         contenedorDelCarrito.appendChild(divProducto);
 
     });
 }
+
+
+const botonDePago = document.getElementById("ir-a-pagar");
+botonDePago.addEventListener("click", () => {
+
+    Swal.fire({
+        icon: 'success',
+        title: 'El pago se realizo con exito.',
+        text: 'Gracias por su compra!',
+        showConfirmButton: false,
+        timer: 3000
+      })
+
+})
+
+
 
 listarProductosDelCarrito(productoEnCarrito);
 mostrarTotal();

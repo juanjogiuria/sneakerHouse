@@ -118,10 +118,27 @@ body {
     body .container .section-total {
       background-color: transparent;
       width: 50%;
-      margin-top: 5px;
+      margin: 15px;
       align-self: center;
       display: flex;
-      justify-content: flex-end; }
+      justify-content: space-between; }
+      body .container .section-total .pagar {
+        padding: 10px;
+        width: 300px;
+        text-transform: uppercase;
+        background-color: #fbed6cae;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 600;
+        text-shadow: 1px 1px white;
+        border: 2px solid rgba(0, 0, 0, 0.082);
+        cursor: pointer; }
+        body .container .section-total .pagar:hover {
+          border: 2px solid rgba(0, 0, 0, 0.361);
+          background-color: #fbed6c; }
       body .container .section-total .total {
         display: flex;
         justify-self: flex-start; }

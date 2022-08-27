@@ -29,11 +29,7 @@ body {
             nav {
                 background-color: rgba(255, 255, 255, 0.966);
                 padding: 10px;
-                //background-image: url("../img/fondo.jpg");
                 background-size: 100%;
-                //box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
-                //border-top: 2px solid black;
-                //border-bottom: 2px solid black;
                 box-shadow: 0 9px 10px rgba(253, 54, 183, 0.427);
 
                 display: grid;
@@ -77,7 +73,6 @@ body {
                     cursor: pointer;
 
                     a {
-                        //font-family: Arial, Helvetica, sans-serif;
                         font-family: 'Secular One', sans-serif;
                         color: rgb(255, 90, 197);
                         padding-left: 8px;
@@ -170,10 +165,32 @@ body {
         .section-total {
             background-color: transparent;
             width: 50%;
-            margin-top: 5px;
+            margin: 15px;
             align-self: center;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+
+            .pagar {
+                padding: 10px;
+                width: 300px;
+                text-transform: uppercase;
+                background-color: #fbed6cae;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Didact Gothic', sans-serif;
+                font-weight: 600;
+                text-shadow: 1px 1px rgb(255, 255, 255);
+                border: 2px solid rgba(0, 0, 0, 0.082);
+                cursor: pointer;
+
+                &:hover {
+                    border: 2px solid rgba(0, 0, 0, 0.361);
+                    background-color: #fbed6c;
+
+                }
+            }
 
             .total {
                 display: flex;
@@ -205,20 +222,10 @@ body {
             display: flex;
             justify-content: center;
             background-color: #F5F5F5;
-            // @-webkit-keyframes tiembla{
-            //     40%  { -webkit-transform:rotateZ( 1deg); }
-            //     50% { -webkit-transform:rotateZ( 0deg, scale(.2)); }
-            //     60% { -webkit-transform:rotateZ( -1deg); }
-            // }
-            // -webkit-animation: tiembla .5s infinite;
-            
-            
 
             img {
-                width: 100%; ////
+                width: 100%;
             }
-
-    
         }
 
         main {
@@ -265,7 +272,7 @@ body {
                     grid-template-areas: "nombre precio"
                         "colores precio";
                     align-items: center;
-                    
+
 
                     .nombre {
                         grid-area: nombre;
@@ -295,9 +302,9 @@ body {
                         -webkit-text-stroke: 0.5px black;
                         border-radius: 5px;
                         text-shadow: 1px 1px rgb(0, 0, 0);
-                        font-size: 25px; ////////////
+                        font-size: 25px;
                         font-weight: 100;
-                        text-align: center; //////////
+                        text-align: center;
                         align-self: flex-start;
                         font-family: 'Secular One', sans-serif;
                         padding-top: 6px;
@@ -306,7 +313,7 @@ body {
 
                 .boton-carrito {
                     padding: 10px;
-                    background-color: #fbed6cae ;
+                    background-color: #fbed6cae;
                     font-size: 20px;
                     display: flex;
                     justify-content: center;
@@ -325,9 +332,7 @@ body {
                     }
 
                     &:hover {
-                        //background-color: #EEEEEE;
                         background-color: #fbed6c;
-
                     }
                 }
 
@@ -346,9 +351,7 @@ body {
 
                 &:hover {
                     filter: saturate(150%);
-                    //background-color: rgba(0, 0, 0, 0.055);
                     background: linear-gradient(0deg, #fbed6cae 0%, rgba(236, 10, 10, 0.301) 31%);
-                    //border: 1px solid rgba(189, 35, 179, 0.196);
                 }
 
                 .imagen {
